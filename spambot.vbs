@@ -1,13 +1,13 @@
 Dim intResult
 Set wshshell = wscript.CreateObject("WScript.Shell")
-usermsg=InputBox("Pls message to spam :D")
-times=InputBox("How many times? :P")
-delaytime=InputBox("Delay Between Messages? ._. (For discord use '1000')")
-intAnswer = Msgbox("Wanna use anti-spam bypass? xd",vbYesNo,"ANTI-SPAM BYPASS")
+usermsg=InputBox("Enter The Message You Want To Spam!")
+times=InputBox("Enter The Amount Of Messages You Want To Send!")
+delaytime=InputBox("Enter The Delay Between Sending Each Message In Milliseconds! (Use '1000' For Discord)")
+intAnswer = Msgbox("Do You Want To Use Anti-Spam Bypasser?",vbYesNo,"ANTI-SPAM BYPASS")
 
 If intAnswer = vbYes Then
-    antispam=InputBox("Enter a number, and the bot will chose a random one from 0 to your input! It's for antispam bypass. I recommend using 10M")
-    msgbox("Starting spamming: '" & usermsg & "' '" & times & "' times with '" & delaytime & "' ms delay in 3 seconds!")
+    antispam=InputBox("Enter A Value For Anti-Spam Bypasser! The Higher Is The Better!")
+    msgbox("Spam Message: '" & usermsg & "'" & vbcrlf & "Amount Of Messages: '" & times & "'" & vbcrlf & "Delay Between Messages: '" & delaytime & "'" & vbcrlf & "Is Anti-Spam Bypass On: YES")
     wscript.sleep 3000
     For i = 1 To times
     Randomize
@@ -19,7 +19,7 @@ If intAnswer = vbYes Then
     wscript.sleep delaytime
     Next
 Elseif intAnswer = vbNo Then
-    msgbox("Starting spamming: '" & usermsg & "' '" & times & "' times with '" & delaytime & "' ms delay in 3 seconds!")
+    msgbox("Spam Message: '" & usermsg & "'" & vbcrlf & "Amount Of Messages: '" & times & "'" & vbcrlf & "Delay Between Messages: '" & delaytime & "'" & vbcrlf & "Is Anti-Spam Bypass On: NO")
     wscript.sleep 3000
     For i = 1 To times  
     wshshell.sendkeys usermsg
